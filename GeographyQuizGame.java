@@ -141,7 +141,7 @@ public class GeographyQuizGame {
             //Declaring user input/Answer
             String QuestionAnswer = input.nextLine().toLowerCase();
 
-            if (QuestionAnswer.equals(firstQA.getAnswer())) {
+            if (QuestionAnswer.equals(firstQA.getAnswer().toLowerCase())) {
                 System.out.println("\nCorrect!");
                 //If correct, score increases by 1
                 score++;
@@ -160,7 +160,7 @@ public class GeographyQuizGame {
             //Converts QuestionAnswer input to lowercase for less percise input
             QuestionAnswer = input.nextLine().toLowerCase();
 
-            if (QuestionAnswer.equals(SecondQA.getAnswer())) {
+            if (QuestionAnswer.equals(SecondQA.getAnswer().toLowerCase())) {
                 System.out.println("\nCorrect!\n");
                 //If correct, score increases by 1
                 score++;
@@ -175,7 +175,7 @@ public class GeographyQuizGame {
 
             QuestionAnswer = input.nextLine().toLowerCase();
 
-            if (QuestionAnswer.equals(ThirdQA.getAnswer())) {
+            if (QuestionAnswer.equals(ThirdQA.getAnswer().toLowerCase())) {
                 System.out.println("\nCorrect!");
                 //If correct, score increases by 1
                 score++;
@@ -192,7 +192,7 @@ public class GeographyQuizGame {
 
             QuestionAnswer = input.nextLine().toLowerCase();
 
-            if (QuestionAnswer.equals(FourthQA.getAnswer())) {
+            if (QuestionAnswer.equals(FourthQA.getAnswer().toLowerCase())) {
                 System.out.println("\nCorrect!");
                 //If correct, score increases by 1
                 score++;
