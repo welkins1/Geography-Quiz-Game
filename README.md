@@ -28,5 +28,10 @@ Overall, I learned a lot in this program, and I'll continue to study what I lear
 
 P.S.
 
-You can run this program by putting both .java files within the same folder/directory and running javac *.java within cmd/terminal. You can then run the program by typing
-java GeographyQuizGame.java 
+You can run this program by putting both .java files within the same folder/directory and running javac *.java within cmd/terminal. You can then run the program by typing java GeographyQuizGame.java.
+
+**UPDATE**
+
+For whatever reason, the .zip for this repo is changing the package name, therefore java GeographyQuizGame.java won't work unless you run mkdir geographyquizgame within the unzipped folder and move all the java and class files into the geographyquizgame directory. Not sure if this is something on my end or Github's end, but I intend to get to the bottom of it. 
+
+
