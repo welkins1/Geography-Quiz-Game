@@ -20,8 +20,7 @@ Overall, I learned a lot in this program, and I'll continue to study what I lear
 
 P.S.
 
-You can run this program by putting both .java files within the same folder/directory and running javac *.java within cmd/terminal. You can then run the program by typing java GeographyQuizGame.java.
-
+You can run GeographyQuizGame.java by running java GeographyQuizGame.java within the geographyquizgame directory. 
 
 
 
