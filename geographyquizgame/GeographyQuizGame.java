@@ -25,7 +25,7 @@ public class GeographyQuizGame {
         
         //This while loop is used later to let the user continue playing / restart the program
         while (PlayAgain) {
-            System.out.println("Hello!\n");
+            System.out.println("\nHello!\n");
 
             System.out.println("Welcome to the World Geography Quiz game.\n");
             System.out.println("This game tests your knowlege on various World Geography facts"
