@@ -77,7 +77,7 @@ public class GeographyQuizGame {
             System.out.print("Please select your difficutly (Easy, Medium or Hard): ");
 
             //Converts difficulty string to lowercase for less percise input
-            String Difficulty = input.nextLine().toLowerCase();
+            String Difficulty = input.nextLine();
 
             //Spacer 
             System.out.println("");
@@ -86,20 +86,20 @@ public class GeographyQuizGame {
             while (true) {
 
                 //If else statement for choosing questions and assinging them to selectedQA array
-                if (Difficulty.equals("easy")) {
+                if (Difficulty.equalsIgnoreCase("easy")) {
                     selectedQA = EasyQA;
                     break;
-                } else if (Difficulty.equals("medium")) {
+                } else if (Difficulty.equalsIgnoreCase("medium")) {
                     selectedQA = MediumQA;
                     break;
-                } else if (Difficulty.equals("hard")) {
+                } else if (Difficulty.equalsIgnoreCase("hard")) {
                     selectedQA = HardQA;
 
                     break;
                 } else {
                     //Invalid input else
                     System.out.print("Invalid difficutly, please select again: ");
-                    Difficulty = input.nextLine().toLowerCase();
+                    Difficulty = input.nextLine();
                     System.out.println("");
 
                 }
@@ -139,9 +139,9 @@ public class GeographyQuizGame {
             System.out.print(firstQA.getQuestion());
 
             //Declaring user input/Answer
-            String QuestionAnswer = input.nextLine().toLowerCase();
+            String QuestionAnswer = input.nextLine();
 
-            if (QuestionAnswer.equals(firstQA.getAnswer().toLowerCase())) {
+            if (QuestionAnswer.equalsIgnoreCase(firstQA.getAnswer())) {
                 System.out.println("\nCorrect!");
                 //If correct, score increases by 1
                 score++;
@@ -158,9 +158,9 @@ public class GeographyQuizGame {
             System.out.print(SecondQA.getQuestion());
 
             //Converts QuestionAnswer input to lowercase for less percise input
-            QuestionAnswer = input.nextLine().toLowerCase();
+            QuestionAnswer = input.nextLine();
 
-            if (QuestionAnswer.equals(SecondQA.getAnswer().toLowerCase())) {
+            if (QuestionAnswer.equalsIgnoreCase(SecondQA.getAnswer())) {
                 System.out.println("\nCorrect!\n");
                 //If correct, score increases by 1
                 score++;
@@ -173,9 +173,9 @@ public class GeographyQuizGame {
             QuestionAnswerPair ThirdQA = selectedQA.get(2);
             System.out.print(ThirdQA.getQuestion());
 
-            QuestionAnswer = input.nextLine().toLowerCase();
+            QuestionAnswer = input.nextLine();
 
-            if (QuestionAnswer.equals(ThirdQA.getAnswer().toLowerCase())) {
+            if (QuestionAnswer.equalsIgnoreCase(ThirdQA.getAnswer())) {
                 System.out.println("\nCorrect!");
                 //If correct, score increases by 1
                 score++;
@@ -190,9 +190,9 @@ public class GeographyQuizGame {
             QuestionAnswerPair FourthQA = selectedQA.get(3);
             System.out.print(FourthQA.getQuestion());
 
-            QuestionAnswer = input.nextLine().toLowerCase();
+            QuestionAnswer = input.nextLine();
 
-            if (QuestionAnswer.equals(FourthQA.getAnswer().toLowerCase())) {
+            if (QuestionAnswer.equalsIgnoreCase(FourthQA.getAnswer())) {
                 System.out.println("\nCorrect!");
                 //If correct, score increases by 1
                 score++;
@@ -233,23 +233,23 @@ public class GeographyQuizGame {
             System.out.print("\nPlay Again? (Yes/No) ");
             
             //User input for continuing
-            String PlayAgainInput = input.next().toLowerCase();
+            String PlayAgainInput = input.next();
             
             //This while loops is use for invalid input 
-            while (!PlayAgainInput.equals("yes") && !PlayAgainInput.equals("no")) {
+            while (!PlayAgainInput.equalsIgnoreCase("yes") && !PlayAgainInput.equalsIgnoreCase("no")) {
                 System.out.print("\nInvalid input, please type yes or no: ");
-                PlayAgainInput = input.next().toLowerCase();
+                PlayAgainInput = input.next();
             }
             
             
             
-            if (PlayAgainInput.equals("no")) {
+            if (PlayAgainInput.equalsIgnoreCase("no")) {
                 //Ending output!
                 System.out.println("\nThanks for playing! " + "(:");
                 
                 //If PlayAgain is false, the while loop doesn't run, therefore the program terminates naturally
                 PlayAgain = false;
-            } else if (PlayAgainInput.equals("yes")) 
+            } else if (PlayAgainInput.equalsIgnoreCase("yes")) 
                 
                 //If PlayAgain is true, the while loop loops
                 PlayAgain = true;
