@@ -245,7 +245,7 @@ public class GeographyQuizGame {
             
             if (PlayAgainInput.equalsIgnoreCase("no")) {
                 //Ending output!
-                System.out.println("\nThanks for playing! " + "(:");
+                System.out.println("\nThanks for playing! " + "(:\n");
                 
                 //If PlayAgain is false, the while loop doesn't run, therefore the program terminates naturally
                 PlayAgain = false;
