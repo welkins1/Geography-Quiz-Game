@@ -79,9 +79,7 @@ public class GeographyQuizGame {
             //Converts difficulty string to lowercase for less percise input
             String Difficulty = input.nextLine();
 
-            //Spacer 
-            System.out.println("");
-
+            
             //Loop for invalid input
             while (true) {
 
@@ -99,7 +97,7 @@ public class GeographyQuizGame {
                 } else {
                     //Invalid input else
                     System.out.print("Invalid difficutly, please select again: ");
-                    Difficulty = input.nextLine();
+                    Difficulty = input.nextLine().toLowerCase();
                     System.out.println("");
 
                 }
@@ -107,7 +105,7 @@ public class GeographyQuizGame {
             }
 
             //Displays selected difficutly. 
-            System.out.println("You selected " + Difficulty + " difficulty.\n");
+            System.out.println("\nYou selected " + Difficulty + " difficulty.\n");
 
             System.out.print("Loading questions");
             //For loop to simulate loading questions
@@ -142,7 +140,7 @@ public class GeographyQuizGame {
             String QuestionAnswer = input.nextLine();
 
             if (QuestionAnswer.equalsIgnoreCase(firstQA.getAnswer())) {
-                System.out.println("\nCorrect!");
+                System.out.println("\nCorrect!\n");
                 //If correct, score increases by 1
                 score++;
             } else {
@@ -150,8 +148,7 @@ public class GeographyQuizGame {
 
             }
 
-            //Spacer
-            System.out.println("");
+          
 
             //Displays the second question
             QuestionAnswerPair SecondQA = selectedQA.get(1);
@@ -176,15 +173,14 @@ public class GeographyQuizGame {
             QuestionAnswer = input.nextLine();
 
             if (QuestionAnswer.equalsIgnoreCase(ThirdQA.getAnswer())) {
-                System.out.println("\nCorrect!");
+                System.out.println("\nCorrect!\n");
                 //If correct, score increases by 1
                 score++;
             } else {
                 System.out.println("\nIncorrect! " + "The correct answer was " + ThirdQA.getAnswer() + ".");
             }
 
-            //Spacer
-            System.out.println("");
+          
 
             ////Displays the fourth question
             QuestionAnswerPair FourthQA = selectedQA.get(3);
@@ -193,17 +189,15 @@ public class GeographyQuizGame {
             QuestionAnswer = input.nextLine();
 
             if (QuestionAnswer.equalsIgnoreCase(FourthQA.getAnswer())) {
-                System.out.println("\nCorrect!");
+                System.out.println("\nCorrect!\n");
                 //If correct, score increases by 1
                 score++;
             } else {
                 System.out.println("\nIncorrect! " + "The correct answer was " + FourthQA.getAnswer() + ".");
             }
 
-            //Spacer 
-            System.out.println("");
-
-            System.out.println("You've answered all the questions.\n");
+           
+            System.out.println("\nYou've answered all the questions.\n");
 
             System.out.print("Calculating Score");
             
@@ -245,7 +239,7 @@ public class GeographyQuizGame {
             
             if (PlayAgainInput.equalsIgnoreCase("no")) {
                 //Ending output!
-                System.out.println("\nThanks for playing! " + "(:\n");
+                System.out.println("\nThanks for playing! " + "(:");
                 
                 //If PlayAgain is false, the while loop doesn't run, therefore the program terminates naturally
                 PlayAgain = false;
@@ -257,6 +251,9 @@ public class GeographyQuizGame {
                 
         } //end of while loop
 
-        
+ 
+            
+        }
+      
     } 
-}
+
